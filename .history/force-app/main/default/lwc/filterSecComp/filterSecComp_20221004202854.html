@@ -1,0 +1,34 @@
+<template>
+
+   <!-- <div class="c-container"> -->
+
+        
+        <div class="slds-p-left_medium">
+            <strong>Filter By:</strong>
+        </div>
+        
+        <lightning-layout class="slds-grid_align-center">
+            
+            
+            <lightning-layout-item class="padding-small">
+                <div class="slds-p-around_medium slds-text-align_center">
+                    <lightning-combobox style="width:150px" name="Country" placeholder="Country" options={countryOptions} onchange={handleCountryChange}>
+                    </lightning-combobox>
+                </div>
+                
+            </lightning-layout-item>
+
+            <lightning-layout-item class="padding-small">
+                <div class="float-right slds-p-around_medium slds-text-align_center">
+                    <lightning-combobox style="width:150px" name="State" placeholder="State" options={stateOptions}>
+                    </lightning-combobox>
+                </div>
+                
+            </lightning-layout-item>
+        </lightning-layout>
+    <!--</div> -->
+    
+    
+
+    
+</template>

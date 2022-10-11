@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Accounts" icon-name="standard:account">
+        <div class="slds-box slds-theme_default">
+            <div class="slds-border_bottom">
+                        <div class="slds-p-horizontal_medium">
+                            <strong>Filter By:</strong>
+                        </div>
+                        
+                        <div class=" slds-grid slds-size_12-of-12">
+                        
+                            <div class="slds-p-around_medium slds-text-align_center">
+                                <lightning-combobox style="width:200px" class="slds-size_1-of-12" name="Country" placeholder="Country"
+                                    options={countryOptions} onchange={handleCountryChange}>
+                                </lightning-combobox>
+                            </div>
+                        
+                        
+                            <div class="float-right slds-p-around_medium slds-text-align_center">
+                                <lightning-combobox style="width:200px" class="slds-size_1-of-12" name="State" placeholder="State"
+                                    options={stateOptions} onchange={handleStateChange} disabled={isCountrySelected}>
+                                </lightning-combobox>
+                            </div>
+                        
+                        </div>
+            </div>
+            
+
+            <div class="slds-clearfix">
+                <div class="slds-p-around_medium slds-float_right">
+                    <lightning-input class="searchBar" type="search" placeholder="Search..." value={keyword}
+                        onkeypress={handleEnter} onchange={handleKeyChange}>
+                    </lightning-input>
+                </div>
+            </div>
+
+           <c-list-view-sec-comp filtered-data={data}></c-list-view-sec-comp>
+        </div>
+    </lightning-card>        
+    
+    
+
+    
+</template>

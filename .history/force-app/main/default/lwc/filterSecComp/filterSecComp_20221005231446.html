@@ -1,0 +1,95 @@
+<template>
+
+    <div class="slds-p-left_medium">
+            
+                </div>
+    
+    
+
+   <!--<div class="c-container">
+
+        
+        
+        
+        <lightning-layout class="slds-grid_align-center">
+            
+          
+            
+            <lightning-layout-item class="padding-small">
+                <div class="slds-p-around_medium slds-text-align_center">
+                    <lightning-combobox style="width:200px" name="Country" placeholder="Country" options={countryOptions} onchange={handleCountryChange}>
+                    </lightning-combobox>
+                </div>
+                
+            </lightning-layout-item>
+
+            <lightning-layout-item class="padding-small">
+                <div class="float-right slds-p-around_medium slds-text-align_center">
+                    <lightning-combobox style="width:200px" name="State" placeholder="State" options={stateOptions}>
+                    </lightning-combobox>
+                </div>
+                
+            </lightning-layout-item>
+        </lightning-layout>
+    </div> -->
+
+
+    <lightning-card>
+
+        <!--<div class="slds-box slds-theme_default">
+                <div class=" slds-grid slds-size_12-of-12">
+                   <div class="slds-p-around_medium slds-text-align_center">
+                        <strong class="slds-size_1-of-12">Filter By:</strong>
+                   </div>
+                    
+                </div>
+        </div> -->
+        
+        
+        
+        <div class="slds-box slds-theme_default">
+            <div class="slds-p-horizontal_medium">
+                    <strong>Filter By:</strong>
+            </div>
+            
+            <div class=" slds-grid slds-size_12-of-12">
+            
+                <div class="slds-p-around_medium slds-text-align_center">
+                        <lightning-combobox style="width:200px" 
+                                            class="slds-size_1-of-12" 
+                                            name="Country"
+                                            placeholder="Country"
+                                            options={countryOptions} 
+                                            onchange={handleCountryChange}>
+                        </lightning-combobox>
+                </div>
+           
+
+                <div class="float-right slds-p-around_medium slds-text-align_center">
+                        <lightning-combobox style="width:200px" 
+                                            class="slds-size_1-of-12" 
+                                            name="State" 
+                                            placeholder="State"
+                                            options={stateOptions}
+                                            onchange={handleStateChange}>
+                        </lightning-combobox>
+                </div>
+           
+            </div>
+
+            <div class="slds-clearfix">
+                <div class="slds-p-around_medium slds-float_right">
+                    <lightning-input class="searchBar" type="search" placeholder="Search..." value={keyword}
+                        onkeypress={handleEnter}>
+                    </lightning-input>
+                </div>
+            </div>
+
+           <c-list-view-sec-comp data={data}></c-list-view-sec-comp>
+        </div>
+    </lightning-card>        
+    
+    
+
+    
+</template>

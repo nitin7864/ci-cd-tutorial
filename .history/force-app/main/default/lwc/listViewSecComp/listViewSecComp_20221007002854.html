@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+
+        <lightning-datatable key-field="id"
+                data={filteredData}
+                show-row-number-column
+                row-number-offset={rowOffset}
+                columns={columns}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}
+                onsort={doSorting}
+                onrowaction={handleRowAction}
+                hide-checkbox-column="true"
+                suppress-bottom-bar="true">
+
+        </lightning-datatable>
+                
+    </lightning-card>    
+    
+
+</template>
