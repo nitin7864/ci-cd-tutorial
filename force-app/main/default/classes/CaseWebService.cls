@@ -1,3 +1,6 @@
+/*new comment 
+/
+*/
 @RestResource(urlMapping='/Cases/*')
 global class CaseWebService {
 	@HttpGet
